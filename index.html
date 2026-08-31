@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eef1f7">
+  <meta name="description" content="MAMBA — água leve com 20g de proteína do colágeno + BCAA. Sem açúcar, sem carboidrato e sem glúten. Produzida no Brasil com qualidade Heineken.">
+  <title>MAMBA. — Water Protein, 20g + BCAA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@400;500;600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ FILM GRAIN ============ -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <nav id="nav" class="nav" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="#hero" class="wordmark" aria-label="MAMBA. — voltar ao topo">
+        <span>MAMBA</span><span class="wordmark-dot" aria-hidden="true"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#flavors" class="nav-underline">Sabores</a></li>
+        <li><a href="#inside" class="nav-underline">Composição</a></li>
+        <li><a href="#story" class="nav-underline">História</a></li>
+        <li><a href="#stockists" class="nav-underline">Onde encontrar</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#shop" class="nav-shop">Comprar <span class="arrow-nudge" aria-hidden="true">→</span></a>
+        <button type="button" class="cart-btn" id="cartOpenBtn" aria-label="Abrir carrinho, 0 itens">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8 H18 L17 20 H7 Z"></path><path d="M9 8 V6 a3 3 0 0 1 6 0 V8"></path>
+          </svg>
+        </button>
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+          <span class="burger"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MOBILE MENU OVERLAY ============ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button type="button" class="mobile-menu-close" id="menuCloseBtn" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5 L19 19 M19 5 L5 19"></path></svg>
+    </button>
+    <div class="mobile-menu-list">
+      <a href="#flavors" class="mobile-menu-link" style="--d:0.05s">Sabores</a>
+      <a href="#inside" class="mobile-menu-link" style="--d:0.12s">Composição</a>
+      <a href="#story" class="mobile-menu-link" style="--d:0.19s">História</a>
+      <a href="#stockists" class="mobile-menu-link" style="--d:0.26s">Onde encontrar</a>
+      <a href="#shop" class="mobile-menu-shop" style="--d:0.34s">Comprar <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <!-- preloader screen -->
+      <div class="preloader" id="preloader">
+        <span class="preloader-word">MAMBA<span class="preloader-dot"></span></span>
+      </div>
+
+      <!-- dark ink layer revealed by growing circle -->
+      <div class="hero-ink" id="heroInk">
+        <div class="bloom" data-bloom style="--bloom-color:#cfe3ea"></div>
+        <div class="hero-particles"><canvas id="heroCanvas"></canvas></div>
+        <div class="hero-support" data-support>
+          <div class="eyebrow" data-support-item="true"><span class="eyebrow-num">01</span><span class="eyebrow-sep">/</span>A fórmula</div>
+          <h2 class="hero-support-title" data-support-item="true">20g de proteína do colágeno, sem açúcar.</h2>
+          <div class="rule" data-support-rule="true" data-reveal-line></div>
+          <p class="hero-support-copy" data-support-item="true">Uma água leve com colágeno hidrolisado e BCAA, produzida no Brasil com qualidade Heineken. Aprovada pela Anvisa, sem açúcar, sem carboidrato e sem glúten.</p>
+          <div class="hero-support-stats" data-support-item="true">
+            <span><b>20</b> g proteína + BCAA</span>
+            <span aria-hidden="true" class="stat-sep">·</span>
+            <span><b>0</b> g açúcar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- bone hero face -->
+      <div class="hero-face">
+        <div class="hero-word">
+          <h1 class="hero-wordmark" aria-label="MAMBA.">
+            <span class="hero-letter" style="--d:0.00s">M</span><span class="hero-letter" style="--d:0.07s">A</span><span class="hero-letter" style="--d:0.14s">M</span><span class="hero-letter" style="--d:0.21s">B</span><span class="hero-letter" style="--d:0.28s">A</span><span class="hero-letter hero-letter-dot" style="--d:0.38s">.</span>
+          </h1>
+        </div>
+        <div class="hero-bottom">
+          <p class="hero-tagline font-display">Sonhe, até<br>pedir Mamba.</p>
+          <div class="scroll-hint" aria-hidden="true">
+            <span class="scroll-hint-label">Rolar</span>
+            <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+          </div>
+          <p class="hero-locale">20g proteína + BCAA<br>São Paulo, Brasil</p>
+        </div>
+      </div>
+
+      <!-- cursor spotlight on hero -->
+      <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ FLAVORS ============ -->
+    <section id="flavors" class="flavors">
+      <div class="flavors-stage">
+        <div class="flavor-tint" data-tint="0" aria-hidden="true" style="--tint: rgba(242,180,195,0.19)"></div>
+        <div class="flavor-tint" data-tint="1" aria-hidden="true" style="--tint: rgba(185,222,196,0.19)"></div>
+        <div class="flavor-tint" data-tint="2" aria-hidden="true" style="--tint: rgba(245,200,145,0.19)"></div>
+
+        <header class="flavors-header">
+          <div class="flavors-header-row">
+            <div class="eyebrow" data-reveal><span class="eyebrow-num">02</span><span class="eyebrow-sep">/</span>Três sabores</div>
+            <div class="flavor-counter tabular">1 / 3</div>
+          </div>
+          <h2 class="flavors-title" data-reveal>Três formulações.</h2>
+        </header>
+
+        <div class="flavors-body">
+          <!-- left column : content panes -->
+          <div class="flavor-content">
+            <div class="flavor-pane is-active" data-flavor-pane="0">
+              <div class="flavor-kicker" data-stage-item="true"><span class="wordmark-sm">MAMBA.01</span><span class="text-mist">assinatura</span></div>
+              <h3 class="flavor-name" data-stage-item="true">Citrus<span class="flavor-dot-text">.</span></h3>
+              <p class="flavor-note font-serif-italic" data-stage-item="true">Limão &amp; Framboesa</p>
+              <p class="flavor-desc" data-stage-item="true">O blend de assinatura, com limão e framboesa. Limpo, seco e levemente frutado. Feito para o tipo de dia que pede proteína leve, sem levantar a voz.</p>
+              <div class="rule" data-stage-item="true" data-reveal-line></div>
+              <ul class="ingredient-list" data-stage-item="true">
+                <li><b>20<span class="mg">g</span></b><span>Colágeno</span><span class="ing-flag">Líder</span></li>
+                <li><b>BCAA</b><span>Essencial</span></li>
+                <li><b>0<span class="mg">g</span></b><span>Açúcar</span></li>
+                <li><b>0<span class="mg">g</span></b><span>Carboidrato</span></li>
+              </ul>
+              <div class="flavor-total" data-stage-item="true"><span>Blend ativo</span><b class="tabular">20<span class="mg-light">g</span></b></div>
+            </div>
+
+            <div class="flavor-pane" data-flavor-pane="1">
+              <div class="flavor-kicker" data-stage-item="true"><span class="wordmark-sm">MAMBA.02</span><span class="text-mist">tropical</span></div>
+              <h3 class="flavor-name" data-stage-item="true">Tropical<span class="flavor-dot-text">.</span></h3>
+              <p class="flavor-note font-serif-italic" data-stage-item="true">Abacaxi com Hortelã</p>
+              <p class="flavor-desc" data-stage-item="true">Para a rotina que precisa de energia sem peso. Abacaxi doce e hortelã fresca sobre o mesmo blend de 20g de proteína — um primeiro gole que não pede desculpas.</p>
+              <div class="rule" data-stage-item="true" data-reveal-line></div>
+              <ul class="ingredient-list" data-stage-item="true">
+                <li><b>20<span class="mg">g</span></b><span>Colágeno</span><span class="ing-flag">Líder</span></li>
+                <li><b>BCAA</b><span>Essencial</span></li>
+                <li><b>0<span class="mg">g</span></b><span>Açúcar</span></li>
+                <li><b>0<span class="mg">g</span></b><span>Carboidrato</span></li>
+              </ul>
+              <div class="flavor-total" data-stage-item="true"><span>Blend ativo</span><b class="tabular">20<span class="mg-light">g</span></b></div>
+            </div>
+
+            <div class="flavor-pane" data-flavor-pane="2">
+              <div class="flavor-kicker" data-stage-item="true"><span class="wordmark-sm">MAMBA.03</span><span class="text-mist">sunset</span></div>
+              <h3 class="flavor-name" data-stage-item="true">Sunset<span class="flavor-dot-text">.</span></h3>
+              <p class="flavor-note font-serif-italic" data-stage-item="true">Maracujá, Manga &amp; Pêssego</p>
+              <p class="flavor-desc" data-stage-item="true">Para o pós-treino que pede frescor. Maracujá, manga e pêssego em uma água leve que mantém a reposição proteica — doce na medida, sem abrir mão do essencial.</p>
+              <div class="rule" data-stage-item="true" data-reveal-line></div>
+              <ul class="ingredient-list" data-stage-item="true">
+                <li><b>20<span class="mg">g</span></b><span>Colágeno</span><span class="ing-flag">Líder</span></li>
+                <li><b>BCAA</b><span>Essencial</span></li>
+                <li><b>0<span class="mg">g</span></b><span>Açúcar</span></li>
+                <li><b>0<span class="mg">g</span></b><span>Carboidrato</span></li>
+              </ul>
+              <div class="flavor-total" data-stage-item="true"><span>Blend ativo</span><b class="tabular">20<span class="mg-light">g</span></b></div>
+            </div>
+          </div>
+
+          <!-- right column : visual -->
+          <div class="flavor-visual">
+            <span class="flavor-numeral tabular" data-numeral="0" aria-hidden="true">01</span>
+            <span class="flavor-numeral tabular" data-numeral="1" aria-hidden="true">02</span>
+            <span class="flavor-numeral tabular" data-numeral="2" aria-hidden="true">03</span>
+            <div class="bloom flavor-bloom" data-bloom style="--bloom-size:58vh;--bloom-color:#f2b4c3"></div>
+            <div class="bloom flavor-bloom" data-bloom style="--bloom-size:58vh;--bloom-color:#b9dec4"></div>
+            <div class="bloom flavor-bloom" data-bloom style="--bloom-size:58vh;--bloom-color:#f5c891"></div>
+            <div class="flavor-canvas-wrap"><canvas id="flavorsCanvas"></canvas></div>
+          </div>
+        </div>
+
+        <div class="flavors-pagination">
+          <button type="button" class="flavor-page is-active tabular" data-flavor-btn="0" aria-label="Ir para Citrus">01</button>
+          <button type="button" class="flavor-page tabular" data-flavor-btn="1" aria-label="Ir para Tropical">02</button>
+          <button type="button" class="flavor-page tabular" data-flavor-btn="2" aria-label="Ir para Sunset">03</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIDE ============ -->
+    <section id="inside" class="inside">
+      <header class="inside-header">
+        <div class="eyebrow inside-eyebrow"><span class="eyebrow-num">03</span><span class="eyebrow-sep">·</span>Ingredientes funcionais</div>
+        <h2 class="inside-title font-display-italic" data-reveal>Composição.</h2>
+        <div class="inside-pills">
+          <button type="button" class="pill is-active" data-ing-pill="0" style="--d:0s">COLÁGENO</button>
+          <button type="button" class="pill" data-ing-pill="1" style="--d:0.05s">BCAA</button>
+          <button type="button" class="pill" data-ing-pill="2" style="--d:0.10s">ZERO AÇÚCAR</button>
+          <button type="button" class="pill" data-ing-pill="3" style="--d:0.15s">SEM GLÚTEN</button>
+        </div>
+      </header>
+
+      <!-- desktop grid -->
+      <div class="inside-grid">
+        <div class="inside-left">
+          <h3 class="inside-wordmark" data-ing-target>
+            <span class="wm-line-1">COLÁ</span><span class="wm-line-2">GENO</span>
+          </h3>
+          <div class="inside-plant">
+            <svg viewBox="0 0 48 48" width="56" height="56" fill="none" aria-hidden="true">
+              <path data-bot="true" d="M24 44 V10 M24 20 C16 20 12 24 12 30 M24 20 C32 20 36 24 36 30 M24 30 C17 30 13 33 13 38 M24 30 C31 30 35 33 35 38 M24 10 C20 10 17 12 17 15 M24 10 C28 10 31 12 31 15" stroke="rgba(238,241,247,0.65)" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+            <p class="font-serif-italic inside-latin">Colágeno hidrolisado</p>
+          </div>
+        </div>
+        <div class="inside-visual">
+          <div class="inside-glow" data-ing-target></div>
+          <canvas id="insideCanvas"></canvas>
+        </div>
+        <div class="inside-details">
+          <div class="ing-index tabular">01 / 04</div>
+          <p class="ing-desc">O colágeno hidrolisado é uma proteína de origem animal que apoia os processos de reposição proteica e manutenção da massa magra.</p>
+          <dl class="ing-rows">
+            <div class="ing-row"><dt>Origem</dt><dd>Origem animal</dd></div>
+            <div class="ing-row"><dt>Função</dt><dd>Reposição proteica</dd></div>
+            <div class="ing-row ing-dose"><dt>Dose</dt><dd class="tabular">0 g de 20 <span class="dose-track"><span class="dose-fill" data-dose-fill></span></span></dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- mobile deck -->
+      <div class="inside-deck" id="insideDeck">
+        <article class="deck-card">
+          <div class="deck-top"><span class="deck-name">COLÁGENO</span><span class="deck-index tabular">01/04</span></div>
+          <p class="deck-latin font-serif-italic">Colágeno hidrolisado</p>
+          <p class="deck-desc" data-deck-item="true">O colágeno hidrolisado é uma proteína de origem animal que apoia os processos de reposição proteica e manutenção da massa magra.</p>
+          <dl class="deck-rows">
+            <div class="ing-row"><dt>Origem</dt><dd>Origem animal</dd></div>
+            <div class="ing-row"><dt>Função</dt><dd>Reposição proteica</dd></div>
+            <div class="ing-row ing-dose"><dt>Dose</dt><dd class="tabular">20 g de 20 <span class="dose-track"><span class="dose-fill" style="--dose:1;--dose-color:#CFE3EA"></span></span></dd></div>
+          </dl>
+        </article>
+        <article class="deck-card">
+          <div class="deck-top"><span class="deck-name">BCAA ESSENCIAL</span><span class="deck-index tabular">02/04</span></div>
+          <p class="deck-latin font-serif-italic">Aminoácidos essenciais</p>
+          <p class="deck-desc" data-deck-item="true">Aminoácidos essenciais que o corpo não produz e precisa obter pela alimentação, naturalmente ligados à manutenção da massa magra.</p>
+          <dl class="deck-rows">
+            <div class="ing-row"><dt>Origem</dt><dd>Dieta equilibrada</dd></div>
+            <div class="ing-row"><dt>Função</dt><dd>Massa magra</dd></div>
+            <div class="ing-row ing-dose"><dt>Dose</dt><dd class="tabular">20 g de 20 <span class="dose-track"><span class="dose-fill" style="--dose:1;--dose-color:#B9DEC4"></span></span></dd></div>
+          </dl>
+        </article>
+        <article class="deck-card">
+          <div class="deck-top"><span class="deck-name">ZERO AÇÚCAR</span><span class="deck-index tabular">03/04</span></div>
+          <p class="deck-latin font-serif-italic">Água leve e sem açúcar</p>
+          <p class="deck-desc" data-deck-item="true">Sem açúcares adicionados e sem carboidratos, para hidratar e repor proteína sem pesar na rotina.</p>
+          <dl class="deck-rows">
+            <div class="ing-row"><dt>Origem</dt><dd>Sem adição</dd></div>
+            <div class="ing-row"><dt>Função</dt><dd>Sem carboidrato</dd></div>
+            <div class="ing-row ing-dose"><dt>Dose</dt><dd class="tabular">0 g de 20 <span class="dose-track"><span class="dose-fill" style="--dose:0;--dose-color:#F5C891"></span></span></dd></div>
+          </dl>
+        </article>
+        <article class="deck-card">
+          <div class="deck-top"><span class="deck-name">SEM GLÚTEN</span><span class="deck-index tabular">04/04</span></div>
+          <p class="deck-latin font-serif-italic">Livre de glúten e lactose</p>
+          <p class="deck-desc" data-deck-item="true">Sem glúten e sem lactose, pensada para caber em diferentes rotinas e estilos de vida.</p>
+          <dl class="deck-rows">
+            <div class="ing-row"><dt>Origem</dt><dd>Fórmula livre</dd></div>
+            <div class="ing-row"><dt>Função</dt><dd>Fácil digestão</dd></div>
+            <div class="ing-row ing-dose"><dt>Dose</dt><dd class="tabular">0 g de 20 <span class="dose-track"><span class="dose-fill" style="--dose:0;--dose-color:#F2B4C3"></span></span></dd></div>
+          </dl>
+        </article>
+      </div>
+      <div class="deck-pagination">
+        <button type="button" class="deck-page is-active tabular" data-deck-btn="0" aria-label="Ir para COLÁGENO">01</button>
+        <button type="button" class="deck-page tabular" data-deck-btn="1" aria-label="Ir para BCAA">02</button>
+        <button type="button" class="deck-page tabular" data-deck-btn="2" aria-label="Ir para ZERO AÇÚCAR">03</button>
+        <button type="button" class="deck-page tabular" data-deck-btn="3" aria-label="Ir para SEM GLÚTEN">04</button>
+      </div>
+
+      <div class="inside-tagline">QUATRO ATRIBUTOS. 20G DE PROTEÍNA. NADA A MAIS.</div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section id="story" class="story">
+      <div class="story-scroller" id="storyScroller">
+        <div class="story-pinned">
+
+          <!-- giant outlined years -->
+          <span class="story-year-bg tabular" data-year-bg="0" aria-hidden="true">21</span>
+          <span class="story-year-bg tabular" data-year-bg="1" aria-hidden="true">22</span>
+          <span class="story-year-bg tabular" data-year-bg="2" aria-hidden="true">23</span>
+          <span class="story-year-bg tabular" data-year-bg="3" aria-hidden="true">24</span>
+          <span class="story-year-bg tabular" data-year-bg="4" aria-hidden="true">25</span>
+
+          <!-- intro overlay -->
+          <div class="story-intro">
+            <div class="eyebrow" data-reveal><span class="eyebrow-num">04</span><span class="eyebrow-sep">/</span>História</div>
+            <h2 class="story-title" data-reveal>Construída em silêncio, em cinco anos de trabalho.</h2>
+            <p class="story-intro-copy" data-reveal>Mamba Water nasceu da ideia de que hidratação também pode carregar nutrição. Três sabores, 20g de proteína, anos de formulação — feita para caber na rotina, não para competir com ela.</p>
+            <div class="scroll-hint story-scroll-hint" aria-hidden="true"><span class="scroll-hint-label">Rolar</span><span class="scroll-line"></span></div>
+          </div>
+
+          <!-- stage -->
+          <div class="story-stage">
+            <div class="story-image-panel" data-story-panel="0">
+              <figure class="story-figure" style="--ph:linear-gradient(150deg,#e3e9f2 0%,#cfe3ea 55%,#8fb3cf 100%)">
+                <div class="story-ph-tag tabular">FIG. 01</div>
+              </figure>
+              <div class="story-figcap"><span class="fig-dot" aria-hidden="true"></span>O primeiro esboço do projeto, São Paulo, 2021</div>
+            </div>
+            <div class="story-image-panel" data-story-panel="1">
+              <figure class="story-figure" style="--ph:linear-gradient(150deg,#e4efe8 0%,#b9dec4 55%,#7fb896 100%)">
+                <div class="story-ph-tag tabular">FIG. 02</div>
+              </figure>
+              <div class="story-figcap"><span class="fig-dot" aria-hidden="true"></span>Amostras no laboratório, fase de formulação, 2022</div>
+            </div>
+            <div class="story-image-panel" data-story-panel="2">
+              <figure class="story-figure" style="--ph:linear-gradient(150deg,#f7ecd8 0%,#f5c891 55%,#d9a25e 100%)">
+                <div class="story-ph-tag tabular">FIG. 03</div>
+              </figure>
+              <div class="story-figcap"><span class="fig-dot" aria-hidden="true"></span>A primeira Mamba Water nas prateleiras, outubro 2023</div>
+            </div>
+            <div class="story-image-panel" data-story-panel="3">
+              <figure class="story-figure" style="--ph:linear-gradient(150deg,#f7e3ea 0%,#f2b4c3 55%,#d9829b 100%)">
+                <div class="story-ph-tag tabular">FIG. 04</div>
+              </figure>
+              <div class="story-figcap"><span class="fig-dot" aria-hidden="true"></span>Lançamento da linha Protein, dezembro 2024</div>
+            </div>
+            <div class="story-image-panel" data-story-panel="4">
+              <figure class="story-figure" style="--ph:linear-gradient(150deg,#ece7f5 0%,#e7d3ec 55%,#b890c4 100%)">
+                <div class="story-ph-tag tabular">FIG. 05</div>
+              </figure>
+              <div class="story-figcap"><span class="fig-dot" aria-hidden="true"></span>Projeto social: 1 lata = 1 litro de água doado, 2025</div>
+            </div>
+
+            <!-- chapter text (left) -->
+            <div class="story-chapters">
+              <div class="story-chapter is-active" data-chapter="0">
+                <div class="chapter-eyebrow" data-story-item="true">Capítulo 01<span class="cx">·</span><span>2021</span></div>
+                <h3 class="chapter-title" data-story-item="true">Uma ideia numa mesa de bar.</h3>
+                <div class="rule" data-story-item="true" data-reveal-line></div>
+                <p class="chapter-copy" data-story-item="true">Em uma mesa de bar em São Paulo, a Better Drinks olhou para o mercado de suplementos e viu uma lacuna: água com proteína de verdade, leve o suficiente para o dia a dia. O desafio era simples — entregar nutrição sem peso.</p>
+              </div>
+              <div class="story-chapter" data-chapter="1">
+                <div class="chapter-eyebrow" data-story-item="true">Capítulo 02<span class="cx">·</span><span>2022</span></div>
+                <h3 class="chapter-title" data-story-item="true">Meses de formulação.</h3>
+                <div class="rule" data-story-item="true" data-reveal-line></div>
+                <p class="chapter-copy" data-story-item="true">Testes atravessaram um laboratório emprestado — sabor, textura, absorção. O colágeno hidrolisado e o BCAA sobreviveram em 20g. Cada ingrediente teve que ganhar seu lugar, ou ficava de fora.</p>
+              </div>
+              <div class="story-chapter" data-chapter="2">
+                <div class="chapter-eyebrow" data-story-item="true">Capítulo 03<span class="cx">·</span><span>2023</span></div>
+                <h3 class="chapter-title" data-story-item="true">A primeira Mamba Water.</h3>
+                <div class="rule" data-story-item="true" data-reveal-line></div>
+                <p class="chapter-copy" data-story-item="true">Em outubro, a primeira linha de águas da Mamba Water chegou ao mercado. Nenhum evento de lançamento — apenas um produto leve, sem açúcar, que encontrou seu público em silêncio.</p>
+              </div>
+              <div class="story-chapter" data-chapter="3">
+                <div class="chapter-eyebrow" data-story-item="true">Capítulo 04<span class="cx">·</span><span>2024</span></div>
+                <h3 class="chapter-title" data-story-item="true">Nasce a Protein.</h3>
+                <div class="rule" data-story-item="true" data-reveal-line></div>
+                <p class="chapter-copy" data-story-item="true">A linha Protein cruzou o país e chegou às prateleiras de todo o Brasil. Em dezembro, o lançamento oficial apresentou as três formulações de 20g de proteína do colágeno.</p>
+              </div>
+              <div class="story-chapter" data-chapter="4">
+                <div class="chapter-eyebrow" data-story-item="true">Capítulo 05<span class="cx">·</span><span>2025</span></div>
+                <h3 class="chapter-title" data-story-item="true">Água para todos.</h3>
+                <div class="rule" data-story-item="true" data-reveal-line></div>
+                <p class="chapter-copy" data-story-item="true">A cada lata, um litro de água potável é doado a comunidades que precisam. Crescer passou a ser também devolver — cidade por cidade, lata por lata.</p>
+              </div>
+            </div>
+
+            <!-- progress rail + year nav (desktop) -->
+            <div class="story-nav">
+              <span class="story-rail" aria-hidden="true"><span class="story-rail-fill" id="storyRailFill"></span></span>
+              <ul class="story-years">
+                <li><button type="button" class="story-year-btn is-active tabular" data-year-btn="0" aria-label="Ir para 2021">2021</button></li>
+                <li><button type="button" class="story-year-btn tabular" data-year-btn="1" aria-label="Ir para 2022">2022</button></li>
+                <li><button type="button" class="story-year-btn tabular" data-year-btn="2" aria-label="Ir para 2023">2023</button></li>
+                <li><button type="button" class="story-year-btn tabular" data-year-btn="3" aria-label="Ir para 2024">2024</button></li>
+                <li><button type="button" class="story-year-btn tabular" data-year-btn="4" aria-label="Ir para 2025">2025</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- bottom year nav (mobile) -->
+          <div class="story-years-mobile">
+            <button type="button" class="story-year-btn is-active tabular" data-year-btn-m="0" aria-label="Ir para 2021">2021</button>
+            <button type="button" class="story-year-btn tabular" data-year-btn-m="1" aria-label="Ir para 2022">2022</button>
+            <button type="button" class="story-year-btn tabular" data-year-btn-m="2" aria-label="Ir para 2023">2023</button>
+            <button type="button" class="story-year-btn tabular" data-year-btn-m="3" aria-label="Ir para 2024">2024</button>
+            <button type="button" class="story-year-btn tabular" data-year-btn-m="4" aria-label="Ir para 2025">2025</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRESS ============ -->
+    <section id="press" class="press">
+      <div class="press-header">
+        <div class="eyebrow" data-reveal><span class="eyebrow-num">05</span><span class="eyebrow-sep">/</span>Imprensa</div>
+        <h2 class="press-title" data-reveal>Notada em silêncio.</h2>
+      </div>
+
+      <div class="press-quotes">
+        <figure class="press-quote" data-reveal>
+          <blockquote>A bebida funcional rara que tem gosto de decisão, não de concessão.</blockquote>
+          <figcaption>Saúde &amp; Boa Forma</figcaption>
+        </figure>
+        <figure class="press-quote" data-reveal style="--d:0.1s">
+          <blockquote>Prova de que uma lata de proteína pode ser tão considerada quanto o corpo que a consome.</blockquote>
+          <figcaption>Ciclo Vivo</figcaption>
+        </figure>
+        <figure class="press-quote" data-reveal style="--d:0.2s">
+          <blockquote>Paramos de tomar outros suplementos nas nossas reuniões. Ninguém disse nada em voz alta.</blockquote>
+          <figcaption>HypeSports</figcaption>
+        </figure>
+      </div>
+
+      <!-- marquee rows -->
+      <div class="marquee marquee--filled">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>Saúde &amp; Boa Forma</span><i></i><span>Casa &amp; Comida</span><i></i><span>Ciclo Vivo</span><i></i><span>Malu</span><i></i><span>HypeSports</span><i></i>
+          </div>
+          <div class="marquee-group">
+            <span>Saúde &amp; Boa Forma</span><i></i><span>Casa &amp; Comida</span><i></i><span>Ciclo Vivo</span><i></i><span>Malu</span><i></i><span>HypeSports</span><i></i>
+          </div>
+        </div>
+      </div>
+      <div class="marquee marquee--outline marquee--reverse">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>Saúde &amp; Boa Forma</span><i></i><span>Casa &amp; Comida</span><i></i><span>Ciclo Vivo</span><i></i><span>Malu</span><i></i><span>HypeSports</span><i></i>
+          </div>
+          <div class="marquee-group">
+            <span>Saúde &amp; Boa Forma</span><i></i><span>Casa &amp; Comida</span><i></i><span>Ciclo Vivo</span><i></i><span>Malu</span><i></i><span>HypeSports</span><i></i>
+          </div>
+        </div>
+      </div>
+      <p class="sr-only">Destaques em Saúde &amp; Boa Forma, Casa &amp; Comida, Ciclo Vivo, Malu, HypeSports.</p>
+    </section>
+
+    <!-- ============ SHOP / WHERE AVAILABLE ============ -->
+    <section id="shop" class="shop">
+      <div class="shop-inner">
+        <div class="eyebrow" data-reveal><span class="eyebrow-num">06</span><span class="eyebrow-sep">/</span>Onde encontrar</div>
+        <h2 class="shop-title" data-reveal>Encontre a Mamba Water na loja, ou peça online.</h2>
+
+        <div class="stockists" id="stockists">
+          <div class="stockist-col" data-city="Sudeste" data-city-color="#cfe3ea">
+            <button type="button" class="stockist-head">
+              <h3>Sudeste</h3>
+              <svg class="stockist-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 9 L12 15 L18 9"></path></svg>
+            </button>
+            <div class="stockist-rule"></div>
+            <ul class="stockist-list">
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Mercado Livre</b><span>Online</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Empório Alto de Pinheiros</b><span>Rua dos Pinheiros, SP</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Mundo Verde</b><span>Av. Paulista, SP</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Rio Sport Center</b><span>Barra da Tijuca, RJ</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Suplementos BH</b><span>Savassi, MG</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+          <div class="stockist-col" data-city="Sul" data-city-color="#b9dec4">
+            <button type="button" class="stockist-head">
+              <h3>Sul</h3>
+              <svg class="stockist-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 9 L12 15 L18 9"></path></svg>
+            </button>
+            <div class="stockist-rule"></div>
+            <ul class="stockist-list">
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Empório Natural</b><span>Juvevê, Curitiba</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Loja Vida Leve</b><span>Moinhos de Vento, Porto Alegre</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Mercado Floripa</b><span>Lagoa da Conceição, Florianópolis</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Nutrition Point</b><span>Batel, Curitiba</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Empório Ser</b><span>Trindade, Florianópolis</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+          <div class="stockist-col" data-city="Nordeste" data-city-color="#f5c891">
+            <button type="button" class="stockist-head">
+              <h3>Nordeste</h3>
+              <svg class="stockist-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 9 L12 15 L18 9"></path></svg>
+            </button>
+            <div class="stockist-rule"></div>
+            <ul class="stockist-list">
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Empório Bahia</b><span>Rio Vermelho, Salvador</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Natural Recife</b><span>Boa Viagem, Recife</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Fortaleza Suplementos</b><span>Meireles, Fortaleza</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Loja da Praia</b><span>Ponta Negra, Natal</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+              <li data-stockist-item="true"><a href="#shop"><span class="stock-sweep" aria-hidden="true"></span><span class="stock-info"><b>Maceió Natural</b><span>Jatiúca, Maceió</span></span><span class="stock-arrow" aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="coming-soon" data-reveal>
+          <div class="coming-label">EM BREVE</div>
+          <div class="coming-cities"><span>Porto Alegre</span><i aria-hidden="true">·</i><span>Curitiba</span><i aria-hidden="true">·</i><span>Brasília</span><i aria-hidden="true">·</i><span>Belém</span><i aria-hidden="true">·</i><span>Goiânia</span></div>
+        </div>
+
+        <div class="order-direct">
+          <span class="od-line od-line--l" data-reveal-line></span>
+          <span class="od-label" data-reveal>COMPRE ONLINE</span>
+          <span class="od-line od-line--r" data-reveal-line></span>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-reveal style="--d:0s">
+            <div class="can-stage">
+              <div class="can-shadow" aria-hidden="true"></div>
+              <svg class="can" viewBox="0 0 120 220" role="img" aria-label="Lata MAMBA.01 Citrus">
+                <defs>
+                  <linearGradient id="can1" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#f7d4de"/><stop offset="0.5" stop-color="#fdf1f4"/><stop offset="1" stop-color="#f2b4c3"/>
+                  </linearGradient>
+                </defs>
+                <rect x="38" y="30" width="44" height="6" rx="3" fill="#d98ea3"/>
+                <rect x="36" y="36" width="48" height="150" rx="6" fill="url(#can1)"/>
+                <rect x="36" y="36" width="48" height="150" rx="6" fill="none" stroke="#cf8298" stroke-width="1"/>
+                <text x="60" y="92" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="15" letter-spacing="-0.5" fill="#0c1b36">MAMBA</text>
+                <text x="60" y="110" text-anchor="middle" font-family="Newsreader, serif" font-weight="300" font-size="14" fill="#0c1b36">Citrus</text>
+                <text x="60" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="6" letter-spacing="1.2" fill="#7a4a5a">LIMÃO &amp; FRAMBOESA</text>
+                <text x="60" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="5" letter-spacing="0.8" fill="#7a4a5a">LIMÃO &amp; FRAMBOESA</text>
+                <text x="60" y="167" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="5" letter-spacing="0.8" fill="#7a4a5a">20G PROTEÍNA + BCAA</text>
+              </svg>
+            </div>
+            <div class="product-name-row"><span class="wordmark-sm">MAMBA.01</span><span class="pm-sep">·</span><span class="pm-name font-display">Citrus</span></div>
+            <p class="product-flavor">Limão &amp; Framboesa</p>
+            <p class="product-tagline">Para quando você precisa de proteína leve, o dia todo.</p>
+            <div class="pack-pills">
+              <button type="button" class="pack-pill is-active">1 LATA</button>
+              <button type="button" class="pack-pill">6 LATAS</button>
+            </div>
+            <div class="product-price"><span class="wordmark-sm">R$14</span><span>BRL</span></div>
+            <p class="product-subscribe font-serif-italic">Assine e economize 15%</p>
+            <button type="button" class="add-btn" data-add-to-cart="MAMBA.01 Citrus">ADICIONAR AO CARRINHO</button>
+            <button type="button" class="sublink">Assinar em vez disso <span aria-hidden="true">→</span></button>
+          </article>
+
+          <article class="product-card" data-reveal style="--d:0.12s">
+            <div class="can-stage">
+              <div class="can-shadow" aria-hidden="true"></div>
+              <svg class="can" viewBox="0 0 120 220" role="img" aria-label="Lata MAMBA.02 Tropical">
+                <defs>
+                  <linearGradient id="can2" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#d9efe0"/><stop offset="0.5" stop-color="#f2faf4"/><stop offset="1" stop-color="#b9dec4"/>
+                  </linearGradient>
+                </defs>
+                <rect x="38" y="30" width="44" height="6" rx="3" fill="#8fb89b"/>
+                <rect x="36" y="36" width="48" height="150" rx="6" fill="url(#can2)"/>
+                <rect x="36" y="36" width="48" height="150" rx="6" fill="none" stroke="#84ad91" stroke-width="1"/>
+                <text x="60" y="92" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="15" letter-spacing="-0.5" fill="#0c1b36">MAMBA</text>
+                <text x="60" y="110" text-anchor="middle" font-family="Newsreader, serif" font-weight="300" font-size="14" fill="#0c1b36">Tropical</text>
+                <text x="60" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="6" letter-spacing="1.2" fill="#3f5c49">ABACAXI COM HORTELÃ</text>
+                <text x="60" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="5" letter-spacing="0.8" fill="#3f5c49">ABACAXI COM HORTELÃ</text>
+                <text x="60" y="167" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="5" letter-spacing="0.8" fill="#3f5c49">20G PROTEÍNA + BCAA</text>
+              </svg>
+            </div>
+            <div class="product-name-row"><span class="wordmark-sm">MAMBA.02</span><span class="pm-sep">·</span><span class="pm-name font-display">Tropical</span></div>
+            <p class="product-flavor">Abacaxi com Hortelã</p>
+            <p class="product-tagline">Para o dia que precisa de energia sem peso.</p>
+            <div class="pack-pills">
+              <button type="button" class="pack-pill is-active">1 LATA</button>
+              <button type="button" class="pack-pill">6 LATAS</button>
+            </div>
+            <div class="product-price"><span class="wordmark-sm">R$14</span><span>BRL</span></div>
+            <p class="product-subscribe font-serif-italic">Assine e economize 15%</p>
+            <button type="button" class="add-btn" data-add-to-cart="MAMBA.02 Tropical">ADICIONAR AO CARRINHO</button>
+            <button type="button" class="sublink">Assinar em vez disso <span aria-hidden="true">→</span></button>
+          </article>
+
+          <article class="product-card" data-reveal style="--d:0.24s">
+            <div class="can-stage">
+              <div class="can-shadow" aria-hidden="true"></div>
+              <svg class="can" viewBox="0 0 120 220" role="img" aria-label="Lata MAMBA.03 Sunset">
+                <defs>
+                  <linearGradient id="can3" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#fbe3c2"/><stop offset="0.5" stop-color="#fdf6ea"/><stop offset="1" stop-color="#f5c891"/>
+                  </linearGradient>
+                </defs>
+                <rect x="38" y="30" width="44" height="6" rx="3" fill="#d69a57"/>
+                <rect x="36" y="36" width="48" height="150" rx="6" fill="url(#can3)"/>
+                <rect x="36" y="36" width="48" height="150" rx="6" fill="none" stroke="#c78c4a" stroke-width="1"/>
+                <text x="60" y="92" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="15" letter-spacing="-0.5" fill="#0c1b36">MAMBA</text>
+                <text x="60" y="110" text-anchor="middle" font-family="Newsreader, serif" font-weight="300" font-size="14" fill="#0c1b36">Sunset</text>
+                <text x="60" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="6" letter-spacing="1.2" fill="#6b4a24">MARACUJÁ, MANGA &amp; PÊSSEGO</text>
+                <text x="60" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="5" letter-spacing="0.8" fill="#6b4a24">MARACUJÁ, MANGA &amp; PÊSSEGO</text>
+                <text x="60" y="167" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="5" letter-spacing="0.8" fill="#6b4a24">20G PROTEÍNA + BCAA</text>
+              </svg>
+            </div>
+            <div class="product-name-row"><span class="wordmark-sm">MAMBA.03</span><span class="pm-sep">·</span><span class="pm-name font-display">Sunset</span></div>
+            <p class="product-flavor">Maracujá, Manga &amp; Pêssego</p>
+            <p class="product-tagline">Para o pós-treino que pede energia.</p>
+            <div class="pack-pills">
+              <button type="button" class="pack-pill is-active">1 LATA</button>
+              <button type="button" class="pack-pill">6 LATAS</button>
+            </div>
+            <div class="product-price"><span class="wordmark-sm">R$14</span><span>BRL</span></div>
+            <p class="product-subscribe font-serif-italic">Assine e economize 15%</p>
+            <button type="button" class="add-btn" data-add-to-cart="MAMBA.03 Sunset">ADICIONAR AO CARRINHO</button>
+            <button type="button" class="sublink">Assinar em vez disso <span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+
+        <!-- mobile range -->
+        <div class="mobile-range">
+          <div class="mr-label" data-reveal>A LINHA</div>
+          <h3 class="mr-title font-display" data-reveal>Peça online.</h3>
+          <div class="mr-thumbs">
+            <button type="button" class="mr-thumb" data-reveal style="--d:0s" data-add-to-cart="MAMBA.01 Citrus">
+              <span class="mr-can"><span class="mr-glow" style="--mr-c:#f2b4c3"></span><svg viewBox="0 0 120 220" aria-hidden="true"><rect x="38" y="30" width="44" height="6" rx="3" fill="#d98ea3"/><rect x="36" y="36" width="48" height="150" rx="6" fill="#f7d4de"/></svg></span>
+              <span class="mr-name font-display">Citrus</span>
+              <span class="mr-price tabular">R$14</span>
+              <span class="mr-view">Ver <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5 L16 12 L9 19"></path></svg></span>
+            </button>
+            <button type="button" class="mr-thumb" data-reveal style="--d:0.1s" data-add-to-cart="MAMBA.02 Tropical">
+              <span class="mr-can"><span class="mr-glow" style="--mr-c:#b9dec4"></span><svg viewBox="0 0 120 220" aria-hidden="true"><rect x="38" y="30" width="44" height="6" rx="3" fill="#8fb89b"/><rect x="36" y="36" width="48" height="150" rx="6" fill="#d9efe0"/></svg></span>
+              <span class="mr-name font-display">Tropical</span>
+              <span class="mr-price tabular">R$14</span>
+              <span class="mr-view">Ver <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5 L16 12 L9 19"></path></svg></span>
+            </button>
+            <button type="button" class="mr-thumb" data-reveal style="--d:0.2s" data-add-to-cart="MAMBA.03 Sunset">
+              <span class="mr-can"><span class="mr-glow" style="--mr-c:#f5c891"></span><svg viewBox="0 0 120 220" aria-hidden="true"><rect x="38" y="30" width="44" height="6" rx="3" fill="#d69a57"/><rect x="36" y="36" width="48" height="150" rx="6" fill="#fbe3c2"/></svg></span>
+              <span class="mr-name font-display">Sunset</span>
+              <span class="mr-price tabular">R$14</span>
+              <span class="mr-view">Ver <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5 L16 12 L9 19"></path></svg></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-news">
+          <div class="foot-label">Newsletter</div>
+          <h2 class="footer-title font-display" data-reveal>Receba novidades quando a Mamba chegar à sua cidade.</h2>
+        </div>
+        <div class="footer-form-wrap">
+          <form class="footer-form" id="footerForm" novalidate>
+            <label for="footer-email" class="sr-only">Seu e-mail</label>
+            <input id="footer-email" type="email" required placeholder="Seu e-mail">
+            <button type="submit">Inscrever</button>
+          </form>
+          <p class="footer-status" id="footerStatus" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <span class="wordmark">MAMBA<span class="wordmark-dot" aria-hidden="true"></span></span>
+          <p class="footer-brand-copy">Água leve com 20g de proteína do colágeno + BCAA. Sem açúcar, sem glúten.</p>
+        </div>
+        <div class="footer-col">
+          <span class="foot-label">Site</span>
+          <ul>
+            <li><a href="#flavors">Sabores</a></li>
+            <li><a href="#inside">Composição</a></li>
+            <li><a href="#story">História</a></li>
+            <li><a href="#stockists">Onde encontrar</a></li>
+            <li><a href="#shop">Loja</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-legal">
+          <span class="foot-label">Legal</span>
+          <ul>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Termos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 MAMBA WATER · Better Drinks</span>
+        <span>Feito no Brasil.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cartDrawer" role="dialog" aria-label="Carrinho" aria-hidden="true">
+    <div class="cart-head">
+      <h2 class="font-display">Carrinho<span class="cart-count tabular">0</span></h2>
+      <button type="button" class="cart-close" id="cartCloseBtn" aria-label="Fechar carrinho">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5 L19 19 M19 5 L5 19"></path></svg>
+      </button>
+    </div>
+    <div class="cart-body">
+      <p class="cart-empty-title font-display">Seu carrinho está vazio.</p>
+      <p class="cart-empty-sub">Proteína que hidrata, por encomenda.</p>
+      <button type="button" class="cart-continue" id="cartContinueBtn">Continuar</button>
+    </div>
+  </aside>
+
+  <!-- ============ CHECKOUT MODAL ============ -->
+  <div class="overlay" id="checkoutOverlay"></div>
+  <div class="checkout" id="checkoutModal" role="dialog" aria-label="Checkout demonstrativo">
+    <button type="button" class="checkout-close" id="checkoutCloseBtn" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5 L19 19 M19 5 L5 19"></path></svg>
+    </button>
+    <div class="checkout-eyebrow">Compra online</div>
+    <h3 class="checkout-title font-display">Compras online em breve.</h3>
+    <p class="checkout-copy">A Mamba Water Protein está disponível no Mercado Livre e em lojas selecionadas do Brasil. As compras diretas abrem em breve — deixe seu e-mail e avisaremos no dia.</p>
+    <form class="checkout-form" id="checkoutForm">
+      <label for="checkout-email" class="sr-only">Seu e-mail</label>
+      <input id="checkout-email" type="email" placeholder="voce@email.com" required>
+      <button type="submit">Avisar-me</button>
+    </form>
+    <a href="https://lista.mercadolivre.com.br/mamba-protein" target="_blank" rel="noopener" class="checkout-stockists" id="checkoutStockists">Comprar no Mercado Livre</a>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="pouring-tip" id="pouringTip" aria-hidden="true">
+    <div class="pt-bloom" id="ptBloom"></div>
+    <span class="pt-label" id="ptLabel">Disponível em São Paulo</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
